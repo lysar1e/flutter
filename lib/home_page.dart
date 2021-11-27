@@ -2,6 +2,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 // ignore_for_file: use_key_in_widget_constructors
 import 'package:dio/dio.dart';
+import 'package:first_app/board_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
@@ -90,7 +91,9 @@ class _HomePageState extends State<HomePage> {
                                   child: TextButton(
                                     child: Text("ПЕРЕЙТИ К ДОСКЕ",
                                         style: TextStyle(color: Colors.orange)),
-                                    onPressed: () => null,
+                                    onPressed: () => Navigator.pushNamed(
+                                        context, "/board",
+                                        arguments: _boards[i]["id"]),
                                     style: TextButton.styleFrom(
                                         minimumSize: Size(100, 20),
                                         alignment: Alignment.bottomLeft),

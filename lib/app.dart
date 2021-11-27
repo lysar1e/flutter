@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:first_app/board_page.dart';
 import 'package:first_app/home_page.dart';
 import 'package:first_app/login_form_page.dart';
 import 'package:first_app/register_form_page.dart';
@@ -68,6 +69,7 @@ class App extends StatelessWidget {
         "/login": (context) => LoginFormPage(),
         "/register": (context) => RegisterFormPage(),
         "/homepage": (context) => HomePage(),
+        "/board": (context) => BoardPage(),
       },
     );
   }
