@@ -56,10 +56,10 @@ class App extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return CircularProgressIndicator();
           } else if (snapshot.hasData) {
-            print(snapshot);
+            // print(snapshot);
             return HomePage();
           } else {
-            print(snapshot);
+            // print(snapshot);
             return LoginFormPage();
           }
         },
